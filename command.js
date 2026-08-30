@@ -124,6 +124,11 @@ function renderEmbedCard(entry) {
       <div class="e-title">${escapeHtml(entry.title || "Nuova candidatura — Bando LSPD")}</div>
       <div class="e-time">${date}</div>
       ${fields}
+      ${
+        typeof entry.aiScore === "number"
+          ? `<div class="e-ai">🤖 Stima testo generato da AI: <strong>${entry.aiScore}%</strong> — indicativa, non è una prova.</div>`
+          : ""
+      }
     </div>`;
 }
 

@@ -17,69 +17,105 @@
   </a>
   <nav>
     <a href="#requisiti">Requisiti</a>
-    <a href="#bando">Compila il bando</a>
     <a href="/command">Department Command</a>
   </nav>
 </header>
 
 <section class="hero">
   <div class="hero-inner">
-    <span class="badge-num">BANDO 2026 · SELEZIONE APERTA</span>
+    <span class="badge-num">N.001 · BANDO 2026 · SELEZIONE APERTA</span>
     <h1>Entra nel Los Santos Police Department</h1>
     <p class="lede">
-      Il dipartimento cerca nuovi agenti. Compila il modulo qui sotto con attenzione:
-      hai <strong>45 minuti</strong> di tempo da quando apri questa pagina per completarlo.
-      Allo scadere del tempo il modulo si chiude automaticamente.
+      Il Los Santos Police Department apre ufficialmente le selezioni per nuove reclute
+      pronte a servire con onore, disciplina e dedizione la comunità di Los Santos.
+      Quando clicchi "Inizia Bando LSPD" hai <strong>45 minuti</strong> per completare
+      il modulo: allo scadere del tempo la pagina si chiude automaticamente.
     </p>
-    <div class="countdown" id="countdown">
-      <span class="label">Tempo rimasto per compilare il bando</span>
-      <span class="clock" id="clock">45:00</span>
+
+    <div class="start-cta" id="startCta">
+      <button class="start-btn" id="startBtn">Inizia Bando LSPD</button>
+      <p class="start-note">Il conto alla rovescia parte nel momento in cui clicchi. Preparati prima di iniziare.</p>
     </div>
   </div>
 </section>
 
-<div class="banner-strip">
-  <img src="https://cdn.phototourl.com/free/2026-08-30-a2f14f02-9af9-4581-a5cb-59f2a2046046.png" alt="LSPD banner">
+<div class="banner-spacer"></div>
+<div class="banner">
+  <div class="banner-frame">
+    <img src="https://cdn.phototourl.com/free/2026-08-30-a2f14f02-9af9-4581-a5cb-59f2a2046046.png" alt="LSPD banner">
+    <div class="scrim"></div>
+    <div class="cap">Los Santos Police Department — Selezione Ufficiali 2026</div>
+  </div>
 </div>
-<div class="banner-caption">Los Santos Police Department — Selezione Ufficiali 2026</div>
+<div class="banner-spacer"></div>
 
 <section class="section" id="requisiti">
   <h2>Requisiti per candidarsi</h2>
   <div class="req-grid">
     <div class="req-card">
-      <h3>Serietà nel roleplay</h3>
-      <p>Rispetto delle regole del server e coerenza nell'interpretazione del personaggio.</p>
+      <h3>Età minima 21 anni (IC)</h3>
+      <p>Requisito in-character per poter vestire la divisa dell'LSPD.</p>
     </div>
     <div class="req-card">
-      <h3>Disponibilità oraria</h3>
-      <p>Presenza minima richiesta durante la settimana per turni ed eventi del dipartimento.</p>
+      <h3>Fedina penale pulita (IC)</h3>
+      <p>Nessun precedente rilevante nel roleplay del personaggio candidato.</p>
     </div>
     <div class="req-card">
-      <h3>Microfono funzionante</h3>
-      <p>Comunicazione vocale chiara, necessaria per le comunicazioni radio e operative.</p>
+      <h3>Conoscenza di Discord (OOC)</h3>
+      <p>Saper usare Discord e gli eventuali sistemi esterni del dipartimento.</p>
     </div>
     <div class="req-card">
-      <h3>Nessun precedente disciplinare grave</h3>
-      <p>Storico pulito sul server relativo a ban o sanzioni gravi recenti.</p>
+      <h3>Microfono funzionante (OOC)</h3>
+      <p>Comunicazione vocale chiara per le comunicazioni radio e operative.</p>
+    </div>
+  </div>
+
+  <h2 style="margin-top:38px;">Fase di selezione</h2>
+  <div class="req-grid">
+    <div class="req-card">
+      <h3>1. Compilazione del bando</h3>
+      <p>Il modulo che trovi qui sotto, da completare in 45 minuti.</p>
+    </div>
+    <div class="req-card">
+      <h3>2. Correzione e selezione</h3>
+      <p>Il Command valuta ogni candidatura ricevuta.</p>
+    </div>
+    <div class="req-card">
+      <h3>3. Colloquio orale</h3>
+      <p>Valutazione finale con un membro del dipartimento.</p>
     </div>
   </div>
 </section>
 
-<div class="banner-strip">
-  <img src="https://cdn.phototourl.com/free/2026-08-30-a9c2195e-55d1-4a2c-9a86-e29525998246.jpg" alt="LSPD banner">
+<div class="banner-spacer"></div>
+<div class="banner">
+  <div class="banner-frame">
+    <img src="https://cdn.phototourl.com/free/2026-08-30-a9c2195e-55d1-4a2c-9a86-e29525998246.jpg" alt="LSPD banner">
+    <div class="scrim"></div>
+    <div class="cap">To Protect and to Serve</div>
+  </div>
 </div>
-<div class="banner-caption">Servi. Proteggi. Los Santos conta su di te.</div>
+<div class="banner-spacer"></div>
 
-<section class="section" id="bando">
+<section class="section" id="bando" style="display:none;" >
   <h2>Modulo di candidatura</h2>
-  <div class="form-wrap" id="formWrap">
-    <iframe id="formFrame"
-      src="https://docs.google.com/forms/d/e/1FAIpQLSe23J6PLFx1lwV3nmjOyXWL1itJutHrNNRj_8twGK4xl9sGNg/viewform?usp=sharing&ouid=111891192825492735234&embedded=true"
-      title="Bando LSPD">Caricamento del modulo…</iframe>
-    <div class="form-closed" id="formClosed">
-      <h3>Bando chiuso</h3>
-      <p>Il tempo a disposizione per compilare il modulo è scaduto. Ricarica la pagina se vuoi ripartire da capo.</p>
-    </div>
+
+  <div class="countdown" id="countdown" style="margin-bottom:26px;">
+    <span class="label">Tempo rimasto per compilare il bando</span>
+    <span class="clock" id="clock">45:00</span>
+  </div>
+
+  <form class="bando-form" id="bandoForm"></form>
+
+  <div class="form-closed" id="formClosed">
+    <h3>Bando chiuso</h3>
+    <p>Il tempo a disposizione per compilare il modulo è scaduto. Ricarica la pagina se vuoi ripartire da capo.</p>
+  </div>
+
+  <div class="confirm-box" id="confirmBox" style="display:none;">
+    <h3>Candidatura inviata</h3>
+    <p>Il Command l'ha ricevuta ed è stata registrata. Ti contatteranno per i prossimi passi.</p>
+    <div class="ai-score" id="aiScoreBox" style="display:none;"></div>
   </div>
 </section>
 

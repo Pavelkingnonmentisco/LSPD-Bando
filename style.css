@@ -131,22 +131,45 @@ a{ color:var(--gold); }
 .countdown.warn .clock{ color:var(--red); }
 
 /* ---------- banners ---------- */
-.banner-strip{
-  padding:0;
-  border-bottom:1px solid var(--steel-line);
+.banner{
+  max-width:900px;
+  margin:0 auto;
+  padding:0 6vw;
+}
+.banner-frame{
+  position:relative;
+  border-radius:var(--radius);
+  overflow:hidden;
+  border:1px solid var(--steel-line);
+  border-top:3px solid var(--gold);
+  aspect-ratio:21/8;
   background:var(--navy-panel);
 }
-.banner-strip img{
-  display:block;
+.banner-frame img{
   width:100%;
-  max-height:340px;
+  height:100%;
   object-fit:cover;
+  display:block;
 }
-.banner-caption{
-  padding:10px 6vw;
+.banner-frame .scrim{
+  position:absolute;
+  inset:auto 0 0 0;
+  height:55%;
+  background:linear-gradient(180deg, transparent, rgba(6,10,16,.88));
+  pointer-events:none;
+}
+.banner-frame .cap{
+  position:absolute;
+  left:20px; right:20px; bottom:14px;
   font-size:.82rem;
-  color:var(--ink-dim);
-  border-bottom:1px solid var(--steel-line);
+  color:var(--ink);
+  font-family:'Oswald',sans-serif;
+  letter-spacing:.02em;
+}
+.banner-spacer{ height:44px; }
+
+@media (max-width:640px){
+  .banner-frame{ aspect-ratio:4/5; }
 }
 
 /* ---------- section ---------- */
@@ -205,7 +228,133 @@ a{ color:var(--gold); }
 }
 .form-closed p{ color:var(--ink-dim); margin:0; }
 
-/* ---------- footer ---------- */
+/* ---------- start screen ---------- */
+.start-cta{
+  text-align:left;
+}
+.start-btn{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  background:var(--gold);
+  color:#171207;
+  border:none;
+  padding:15px 26px;
+  font-family:'Oswald',sans-serif;
+  font-weight:600;
+  font-size:1rem;
+  letter-spacing:.02em;
+  border-radius:var(--radius);
+  cursor:pointer;
+}
+.start-btn:hover{ background:#dcb52e; }
+.start-note{
+  color:var(--ink-dim);
+  font-size:.82rem;
+  margin-top:12px;
+}
+
+/* ---------- native form ---------- */
+.bando-form{ max-width:740px; }
+.q-block{
+  margin-bottom:24px;
+  padding-bottom:24px;
+  border-bottom:1px solid var(--steel-line);
+}
+.q-block:last-of-type{ border-bottom:none; }
+.q-block label.q-title{
+  display:block;
+  font-size:.98rem;
+  font-weight:500;
+  color:var(--ink);
+  margin-bottom:10px;
+}
+.q-block .required{ color:var(--red); margin-left:3px; }
+.q-block input[type="text"],
+.q-block textarea{
+  width:100%;
+  background:var(--navy-panel);
+  border:1px solid var(--steel-line);
+  color:var(--ink);
+  padding:11px 13px;
+  border-radius:var(--radius);
+  font-size:.92rem;
+  font-family:inherit;
+}
+.q-block textarea{ min-height:96px; resize:vertical; }
+.q-block input:focus, .q-block textarea:focus{
+  outline:none; border-color:var(--gold-dim);
+}
+.q-options{ display:flex; flex-direction:column; gap:9px; }
+.q-options label{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-size:.9rem;
+  color:var(--ink-dim);
+  cursor:pointer;
+}
+.q-options input{ accent-color:var(--gold); }
+.q-section-title{
+  font-family:'Oswald',sans-serif;
+  font-size:1.15rem;
+  font-weight:600;
+  color:var(--gold);
+  margin:34px 0 18px;
+  padding-top:10px;
+}
+.q-section-title:first-child{ margin-top:0; }
+.q-other-wrap{ display:flex; align-items:center; gap:10px; }
+.q-other-wrap input[type="text"]{
+  flex:1;
+  background:var(--navy-panel);
+  border:1px solid var(--steel-line);
+  color:var(--ink);
+  padding:7px 10px;
+  border-radius:var(--radius);
+  font-size:.88rem;
+  font-family:inherit;
+}
+.q-other-wrap input[type="text"]:disabled{ opacity:.4; }
+.form-msg{
+  font-size:.85rem;
+  margin-top:6px;
+  min-height:1.1em;
+}
+  font-size:.85rem;
+  margin-top:6px;
+  min-height:1.1em;
+}
+.form-msg.err{ color:var(--red); }
+.submit-wrap{ margin-top:6px; }
+
+.confirm-box{
+  max-width:740px;
+  border:1px solid var(--steel-line);
+  border-left:3px solid var(--gold);
+  background:var(--navy-panel);
+  border-radius:var(--radius);
+  padding:26px 24px;
+}
+.confirm-box h3{
+  margin:0 0 8px;
+  font-size:1.1rem;
+}
+.confirm-box p{ color:var(--ink-dim); margin:0; }
+
+/* ai score badge, shown on confirmation + in command dashboard */
+.ai-score{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  margin-top:16px;
+  padding:8px 13px;
+  border:1px dashed var(--steel-line);
+  border-radius:var(--radius);
+  font-size:.8rem;
+  color:var(--ink-dim);
+}
+.ai-score strong{ color:var(--gold); }
 footer{
   padding:26px 6vw;
   color:var(--ink-dim);
@@ -341,6 +490,14 @@ footer{
   margin-bottom:2px;
 }
 .embed-card .e-field .a{ font-size:.9rem; color:var(--ink); }
+.embed-card .e-ai{
+  margin-top:14px;
+  padding-top:12px;
+  border-top:1px solid var(--steel-line);
+  font-size:.78rem;
+  color:var(--ink-dim);
+}
+.embed-card .e-ai strong{ color:var(--gold); }
 .empty-state{
   color:var(--ink-dim);
   font-size:.9rem;
