@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Modulo di candidatura — LSPD</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <a class="nav-brand" href="/">
+    <svg class="star" viewBox="0 0 100 100" fill="none">
+      <path d="M50 4 61 36 96 36 68 57 79 90 50 70 21 90 32 57 4 36 39 36Z" fill="#c9a227"/>
+    </svg>
+    LSPD — Los Santos Police Department
+  </a>
+  <nav>
+    <a href="/">← Torna alla home</a>
+  </nav>
+</header>
+
+<section class="section" id="bando">
+  <h2>Modulo di candidatura</h2>
+
+  <div class="countdown" id="countdown" style="margin-bottom:26px;">
+    <span class="label">Tempo rimasto per compilare il bando</span>
+    <span class="clock" id="clock">45:00</span>
+  </div>
+
+  <form class="bando-form" id="bandoForm"></form>
+
+  <div class="form-closed" id="formClosed">
+    <h3>Bando chiuso</h3>
+    <p>Il tempo a disposizione per compilare il modulo è scaduto. Torna alla home e ricomincia se vuoi ripartire da capo.</p>
+  </div>
+
+  <div class="confirm-box" id="confirmBox" style="display:none;">
+    <h3>Candidatura inviata</h3>
+    <p>Il Command l'ha ricevuta ed è stata registrata. Ti contatteranno per i prossimi passi.</p>
+    <div class="ai-score" id="aiScoreBox" style="display:none;"></div>
+  </div>
+</section>
+
+<footer>
+  <span>LSPD — Los Santos Police Department</span>
+  <span>Accesso riservato al personale: <a href="/command">Department Command →</a></span>
+</footer>
+
+<script src="bando.js"></script>
+</body>
+</html>
