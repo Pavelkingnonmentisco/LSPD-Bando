@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bando di Reclutamento — LSPD</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <a class="nav-brand" href="/">
+    <svg class="star" viewBox="0 0 100 100" fill="none">
+      <path d="M50 4 61 36 96 36 68 57 79 90 50 70 21 90 32 57 4 36 39 36Z" fill="#c9a227"/>
+    </svg>
+    LSPD — Los Santos Police Department
+  </a>
+  <nav>
+    <a href="#requisiti">Requisiti</a>
+    <a href="#bando">Compila il bando</a>
+    <a href="/command">Department Command</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <span class="badge-num">BANDO 2026 · SELEZIONE APERTA</span>
+    <h1>Entra nel Los Santos Police Department</h1>
+    <p class="lede">
+      Il dipartimento cerca nuovi agenti. Compila il modulo qui sotto con attenzione:
+      hai <strong>45 minuti</strong> di tempo da quando apri questa pagina per completarlo.
+      Allo scadere del tempo il modulo si chiude automaticamente.
+    </p>
+    <div class="countdown" id="countdown">
+      <span class="label">Tempo rimasto per compilare il bando</span>
+      <span class="clock" id="clock">45:00</span>
+    </div>
+  </div>
+</section>
+
+<div class="banner-strip">
+  <img src="https://cdn.phototourl.com/free/2026-08-30-a2f14f02-9af9-4581-a5cb-59f2a2046046.png" alt="LSPD banner">
+</div>
+<div class="banner-caption">Los Santos Police Department — Selezione Ufficiali 2026</div>
+
+<section class="section" id="requisiti">
+  <h2>Requisiti per candidarsi</h2>
+  <div class="req-grid">
+    <div class="req-card">
+      <h3>Serietà nel roleplay</h3>
+      <p>Rispetto delle regole del server e coerenza nell'interpretazione del personaggio.</p>
+    </div>
+    <div class="req-card">
+      <h3>Disponibilità oraria</h3>
+      <p>Presenza minima richiesta durante la settimana per turni ed eventi del dipartimento.</p>
+    </div>
+    <div class="req-card">
+      <h3>Microfono funzionante</h3>
+      <p>Comunicazione vocale chiara, necessaria per le comunicazioni radio e operative.</p>
+    </div>
+    <div class="req-card">
+      <h3>Nessun precedente disciplinare grave</h3>
+      <p>Storico pulito sul server relativo a ban o sanzioni gravi recenti.</p>
+    </div>
+  </div>
+</section>
+
+<div class="banner-strip">
+  <img src="https://cdn.phototourl.com/free/2026-08-30-a9c2195e-55d1-4a2c-9a86-e29525998246.jpg" alt="LSPD banner">
+</div>
+<div class="banner-caption">Servi. Proteggi. Los Santos conta su di te.</div>
+
+<section class="section" id="bando">
+  <h2>Modulo di candidatura</h2>
+  <div class="form-wrap" id="formWrap">
+    <iframe id="formFrame"
+      src="https://docs.google.com/forms/d/e/1FAIpQLSe23J6PLFx1lwV3nmjOyXWL1itJutHrNNRj_8twGK4xl9sGNg/viewform?usp=sharing&ouid=111891192825492735234&embedded=true"
+      title="Bando LSPD">Caricamento del modulo…</iframe>
+    <div class="form-closed" id="formClosed">
+      <h3>Bando chiuso</h3>
+      <p>Il tempo a disposizione per compilare il modulo è scaduto. Ricarica la pagina se vuoi ripartire da capo.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span>LSPD — Los Santos Police Department</span>
+  <span>Accesso riservato al personale: <a href="/command">Department Command →</a></span>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
