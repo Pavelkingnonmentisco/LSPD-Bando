@@ -32,8 +32,8 @@
       il modulo: allo scadere del tempo la pagina si chiude automaticamente.
     </p>
 
-    <div class="start-cta" id="startCta">
-      <button class="start-btn" id="startBtn">Inizia Bando LSPD</button>
+    <div class="start-cta">
+      <a class="start-btn" href="/bando">Inizia Bando LSPD</a>
       <p class="start-note">Il conto alla rovescia parte nel momento in cui clicchi. Preparati prima di iniziare.</p>
     </div>
   </div>
@@ -42,8 +42,9 @@
 <div class="banner-spacer"></div>
 <div class="banner">
   <div class="banner-frame">
-    <img src="https://cdn.phototourl.com/free/2026-08-30-a2f14f02-9af9-4581-a5cb-59f2a2046046.png" alt="LSPD banner">
-    <div class="scrim"></div>
+    <div class="banner-img-wrap">
+      <img src="https://cdn.phototourl.com/free/2026-08-30-a2f14f02-9af9-4581-a5cb-59f2a2046046.png" alt="LSPD banner">
+    </div>
     <div class="cap">Los Santos Police Department — Selezione Ufficiali 2026</div>
   </div>
 </div>
@@ -90,40 +91,18 @@
 <div class="banner-spacer"></div>
 <div class="banner">
   <div class="banner-frame">
-    <img src="https://cdn.phototourl.com/free/2026-08-30-a9c2195e-55d1-4a2c-9a86-e29525998246.jpg" alt="LSPD banner">
-    <div class="scrim"></div>
+    <div class="banner-img-wrap">
+      <img src="https://cdn.phototourl.com/free/2026-08-30-a9c2195e-55d1-4a2c-9a86-e29525998246.jpg" alt="LSPD banner">
+    </div>
     <div class="cap">To Protect and to Serve</div>
   </div>
 </div>
 <div class="banner-spacer"></div>
-
-<section class="section" id="bando" style="display:none;" >
-  <h2>Modulo di candidatura</h2>
-
-  <div class="countdown" id="countdown" style="margin-bottom:26px;">
-    <span class="label">Tempo rimasto per compilare il bando</span>
-    <span class="clock" id="clock">45:00</span>
-  </div>
-
-  <form class="bando-form" id="bandoForm"></form>
-
-  <div class="form-closed" id="formClosed">
-    <h3>Bando chiuso</h3>
-    <p>Il tempo a disposizione per compilare il modulo è scaduto. Ricarica la pagina se vuoi ripartire da capo.</p>
-  </div>
-
-  <div class="confirm-box" id="confirmBox" style="display:none;">
-    <h3>Candidatura inviata</h3>
-    <p>Il Command l'ha ricevuta ed è stata registrata. Ti contatteranno per i prossimi passi.</p>
-    <div class="ai-score" id="aiScoreBox" style="display:none;"></div>
-  </div>
-</section>
 
 <footer>
   <span>LSPD — Los Santos Police Department</span>
   <span>Accesso riservato al personale: <a href="/command">Department Command →</a></span>
 </footer>
 
-<script src="script.js"></script>
 </body>
 </html>

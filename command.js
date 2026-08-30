@@ -1,9 +1,10 @@
 // ---------------------------------------------------------------
 // Department Command — login + bacheca candidature
 //
-// Le password NON sono salvate in chiaro nel database: qui viene
-// confrontato l'hash SHA-256 della password inserita con l'hash
-// salvato su Firebase in /users/{username}/passwordHash.
+// Le password NON sono salvate in chiaro nel database: viene calcolato
+// l'hash SHA-256 della password inserita e la verifica avviene lato
+// server su /api/login (così /users può restare protetto da regole
+// Firebase chiuse senza rompere il login — vedi api/login.js).
 // Vedi README.md per come creare il primo utente (Pavel).
 // ---------------------------------------------------------------
 
@@ -53,17 +54,15 @@ loginForm.addEventListener("submit", async (e) => {
   const password = document.getElementById("password").value;
 
   try {
-    const res = await fetch(`${FIREBASE_URL}/users/${encodeURIComponent(username)}.json`);
-    if (!res.ok) throw new Error("network");
-    const user = await res.json();
+    const passwordHash = await sha256(password);
+    const res = await fetch("/api/login", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ username, passwordHash }),
+    });
+    const data = await res.json();
 
-    if (!user || !user.passwordHash) {
-      errMsg.textContent = "Credenziali non valide.";
-      return;
-    }
-
-    const enteredHash = await sha256(password);
-    if (enteredHash === user.passwordHash) {
+    if (data.ok) {
       sessionStorage.setItem(SESSION_KEY, username);
       showDashboard(username);
     } else {
