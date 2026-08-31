@@ -1,7 +1,0 @@
-{
-  "name": "lspd-site",
-  "private": true,
-  "dependencies": {
-    "firebase-admin": "^12.7.0"
-  }
-}
