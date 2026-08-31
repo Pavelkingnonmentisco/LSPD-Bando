@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#0a121e">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="apple-touch-icon" href="https://cdn.phototourl.com/free/2026-08-30-c218c141-154a-4354-983e-1d187be89cde.webp">
+<link rel="icon" href="https://cdn.phototourl.com/free/2026-08-30-c218c141-154a-4354-983e-1d187be89cde.webp">
+<title>Modulo di candidatura — LSPD</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <a class="nav-brand" href="/">
+    <img class="logo" src="https://cdn.phototourl.com/free/2026-08-30-c218c141-154a-4354-983e-1d187be89cde.webp" alt="LSPD">
+    <span class="nav-brand-text">LSPD — Los Santos Police Department</span>
+  </a>
+  <nav>
+    <a href="/">← Torna alla home</a>
+  </nav>
+</header>
+
+<section class="section" id="bando">
+  <h2>Modulo di candidatura</h2>
+
+  <div class="countdown" id="countdown" style="margin-bottom:26px;">
+    <span class="label">Tempo rimasto per compilare il bando</span>
+    <span class="clock" id="clock">45:00</span>
+  </div>
+
+  <form class="bando-form" id="bandoForm"></form>
+
+  <div class="form-closed" id="formClosed">
+    <h3>Bando chiuso</h3>
+    <p>Il tempo a disposizione per compilare il modulo è scaduto. Torna alla home e ricomincia se vuoi ripartire da capo.</p>
+  </div>
+
+  <div class="confirm-box" id="confirmBox" style="display:none;">
+    <h3>Candidatura inviata</h3>
+    <p>Il Command l'ha ricevuta ed è stata registrata. Ti contatteranno per i prossimi passi.</p>
+    <div class="ai-score" id="aiScoreBox" style="display:none;"></div>
+  </div>
+</section>
+
+<footer>
+  <span>LSPD — Los Santos Police Department</span>
+  <span>Accesso riservato al personale: <a href="/command">Department Command →</a></span>
+</footer>
+
+<script src="bando.js"></script>
+</body>
+</html>
