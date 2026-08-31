@@ -1,0 +1,21 @@
+[build]
+  publish = "."
+  functions = "netlify/functions"
+
+# il sito chiama fetch("/api/login") ecc: qui li colleghiamo alle funzioni
+# reali, che Netlify pubblica sotto /.netlify/functions/*
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/:splat"
+  status = 200
+
+# URL puliti, come prima con Vercel (cleanUrls)
+[[redirects]]
+  from = "/bando"
+  to = "/bando.html"
+  status = 200
+
+[[redirects]]
+  from = "/command"
+  to = "/command.html"
+  status = 200
